@@ -28,6 +28,25 @@ export class DevsComponent{
   }
 
 
+  hidePost: boolean= true;
+
+  togglePost(){
+    this.hidePost = !this.hidePost,
+    this.changeHidden();
+  }
+
+  changeHidden(){
+    this.styleList = {
+      'display': this.hidePost ? 'none' : 'block'
+    }
+  }
+  styleList : object ={
+    'display': this.hidePost ? 'none' : 'block'
+    
+
+  }
+
+
   
 
 }
