@@ -1,0 +1,24 @@
+<h1>Donuts</h1>
+
+<form #detailForm="ngForm" (ngSubmit)="getFullDonut(detailForm.form.value.id)">
+    <label for="id">Select Donut</label><br>
+    <select name ="id" placeholder="Select Donut" ngModel>
+        <option value="1">{{donut.results[0].name}}</option>
+        <option value="2">{{donut.results[1].name}}</option>
+        <option value="3">{{donut.results[2].name}}</option>
+        <option value="4">{{donut.results[3].name}}</option>
+        <option value="5">{{donut.results[4].name}}</option>
+        <option value="6">{{donut.results[5].name}}</option>
+        <option value="7">{{donut.results[6].name}}</option>
+        <option value="8">{{donut.results[7].name}}</option>
+    </select><br>
+    <input type="submit" value="Get Donut Detail" />   
+</form>
+<div *ngIf = "detailedDonut.calories !== undefined
+&& detailedDonut.calories !== null">
+    <h2>{{detailedDonut.name}}</h2>
+    <p>{{detailedDonut.calories}} calories</p>
+    <img *ngIf = "detailedDonut.photo !== null
+    && detailedDonut.photo  !== undefined " 
+    style ="width: 45%" src="{{detailedDonut.photo}}"/>
+</div>
