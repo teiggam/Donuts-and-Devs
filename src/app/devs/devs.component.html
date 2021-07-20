@@ -1,5 +1,6 @@
-<h2>Devs</h2><br>
+<h1>Devs</h1>
 <button (click) ="togglePost()">Learn about some Famous People</button>
+<br><br><p></p>
 <div [ngStyle] ="styleList" *ngFor="let d of dev.complete">
     <hr>
     <h2>{{d.firstName}} {{d.lastName}} {{d.innovation}} in {{d.year}}.</h2>
